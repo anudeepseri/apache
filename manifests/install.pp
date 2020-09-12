@@ -5,9 +5,9 @@
 #   include apache::install
 class apache::install (
   $install_state = $apache::params::install_state,
-  $pkd_name      = $apache::params::pkg_name
+  $pkd_name      = $apache::params::pkg_name,
 ) inherits apache::params {
-    package { "${pkg_name}":
+    package { "${apache::pkg_name}":
       ensure => $install_state,
     }
 }

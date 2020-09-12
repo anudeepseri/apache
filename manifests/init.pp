@@ -3,6 +3,14 @@
 # A description of what this class does
 #
 #   include apache
-class apache {
-  include apache::install
+class apache (
+ String $pkg_name,
+ String $filename,
+ String $path,
+) {
+  contain apache::install
+  contain apache::config
+
+  Class['::apache::install']
+  -> Class['::apache::config']
 }

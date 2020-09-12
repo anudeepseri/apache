@@ -9,6 +9,6 @@ class apache::params {
 
   case $::osfamily {
     'Debian': { $pkg_name = 'apache2' }
-    'Suse'  : { $pkg_name = 'httpd' }
+    'Suse'  : { $pkg_name = 'https' }
   }
 }
