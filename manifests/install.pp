@@ -6,5 +6,5 @@
 #   include apache::install
 class apache::install {
   package { 'httpd':
-    ensure => ipresent,
+    ensure => present,
 }
